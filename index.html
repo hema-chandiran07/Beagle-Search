@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BeagleSearch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="index">
+  <div class="menu-icon">&#9776;</div>
+   <div class="logo-title">
+  <h1 style="color: #ADE792;">B</h1>  
+  <h1 style="color: #FF6B6B;">e</h1>   
+  <h1 style="color: #FFD93D;">a</h1>  
+  <h1 style="color: #A076F9;">g</h1>   
+  <h1 style="color: #5BC0F8;">l</h1>  
+  <h1 style="color: #FBAE3C;">e</h1> 
+  <h1 style="color: #FF6B6B;">S</h1>  
+  <h1 style="color: #ADE792;">e</h1>  
+  <h1 style="color: #5BC0F8;">a</h1>   
+  <h1 style="color: #FFD93D;">r</h1>  
+  <h1 style="color: #A076F9;">c</h1>  
+  <h1 style="color: #FBAE3C;">h</h1>     
+  </div>
+ <div class="main-container">
+  <form id="searchForm" >
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="BeagleSearch or Type a URL...." />
+      <button type="submit" class="search-button">
+        <img src="Assets/logo1.png" alt="Search" style="width: 20px; margin-right: 8px; vertical-align: middle;" />
+        Search
+      </button>
+    </div>
+  </form>
+</div>
+
+<img src="Assets/logo.png" alt="logo" class="icon">
+
+<script >
+  document.getElementById("searchForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const query = document.getElementById("searchInput").value;
+      if(query.trim()) {
+        window.location.href = `results.html?q=${encodeURIComponent(query)}`;
+      }
+    });
+</script>
+
+
+</body>
+</html>
